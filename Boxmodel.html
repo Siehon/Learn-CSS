@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><em>CSS Box Model</em></title>
+   <style>
+
+     h1 {
+        color: brown;
+     }
+
+     h3 {
+
+        color: brown;
+     }
+
+     p {
+
+        color: brown;
+     }
+
+     ul {
+
+        color: brown;
+     }
+
+     ol {
+
+        color: brown;
+     }
+
+     h5 {
+
+        color: brown;
+     }
+
+
+   </style>
+   
+    </head>
+    <body>
+        <ul>
+            <li><a href="index.html.html">HOME</a></li>
+        </ul>
+       
+        <h1><u><em>CSS BOX MODEL SUMMARY</em></u></h1>
+    
+    <h3>Box-Sizing</h3>
+    <p>The box-sizing CSS property sets how the total width and height of an element is calculated.</p>
+    <p>By default in the CSS box model, the width and height you assign to an element is applied only to the element's content box.</p>
+    <p> If the element has any border or padding, this is then added to the width and height to arrive at the size of the box that's rendered on the screen. This means that when you set width and height, you have to adjust the value you give to allow for any border or padding that may be added. For example, if you have four boxes with width: 25%;, if any has left or right padding or a left or right border, they will not by default fit on one line within the constraints of the parent container.</p>
+
+    <h3><em>THE BOX-SIZING PROPERTY CAN BE USED TO ADJUST TTHIS BEHAVIOR:</em></h3>
+    <ul>
+        <li>Content-box gives you the default CSS box-sizing behavior. If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width, making the element wider than 100px.</li>
+        <li>Border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements. box-sizing: border-box is the default styling that browsers use for the <u>table</u>, <u>select</u>, and <u>button</u> elements, and for <u>input</u> elements whose type is radio, checkbox, reset, button, submit, color, or search.</li>
+    </ul>
+    <h3><em>VALUES</em></h3>
+    <h5><em>content-box</em></h5>
+    <ol>
+       <li>This is the initial and default value as specified by the CSS standard. The width and height properties include the content, but does not include the padding, border, or margin. For example, .box {width: 350px; border: 10px solid black;} renders a box that is 370px wide.
+
+        Here, the dimensions of the element are calculated as: width = width of the content, and height = height of the content. (Borders and padding are not included in the calculation.)</li>
+    </ol>
+    <h5><em>border-box</em></h5>
+    <ol>
+      <li>The width and height properties include the content, padding, and border, but do not include the margin. Note that padding and border will be inside of the box. For example, .box {width: 350px; border: 10px solid black;} renders a box that is 350px wide, with the area for content being 330px wide. The content box can't be negative and is floored to 0, making it impossible to use border-box to make the element disappear.
+
+        Here the dimensions of the element are calculated as: width = border + padding + width of the content, and height = border + padding + height of the content.</li>  
+    </ol>
+
+   </body>
+</html>
